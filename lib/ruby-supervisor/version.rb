@@ -1,5 +1,3 @@
-module Ruby
-  module Supervisor
-    VERSION = "0.0.1"
-  end
+module RubySupervisor
+  VERSION = "0.0.1"
 end

@@ -1,7 +1,7 @@
-require "ruby-supervisor/version"
+require File.expand_path('../ruby-supervisor/version', __FILE__)
+require File.expand_path('../ruby-supervisor/api', __FILE__)
 
-module Ruby
-  module Supervisor
-    # Your code goes here...
-  end
+module RubySupervisor
+  
 end
+
