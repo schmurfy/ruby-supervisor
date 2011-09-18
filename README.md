@@ -1,4 +1,6 @@
 
+[![Build Status](https://secure.travis-ci.org/schmurfy/ruby-supervisor.png)](https://secure.travis-ci.org/schmurfy/ruby-supervisor.png)
+
 # What is this ?
 
 I needed an interface to Supervisor, a python alternative to daemontools amongst others and
