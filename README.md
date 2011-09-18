@@ -5,7 +5,7 @@ I needed an interface to Supervisor, a python alternative to daemontools amongst
 since I did not found any in ruby I made mine !
 
 Instead of blindly mapping the XML-RPC methods I decided to built an API which feels more
-like a native ruby API than an ugly java like things.
+like a native ruby API than an ugly java like thing.
 
 # Examples
 
