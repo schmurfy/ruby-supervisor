@@ -13,7 +13,10 @@ like a native ruby API than an ugly java like thing.
 
 ```ruby
 require 'ruby-supervisor'
-client = RubySupervisor::Client.new('192.168.0.32')
+client = RubySupervisor::Client.new('192.168.0.32', 9001,
+    :user => 'user',
+    :password => 'secret'
+  )
 
 process = client.process('collectd')
 
