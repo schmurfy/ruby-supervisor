@@ -70,7 +70,7 @@ module RubySupervisor
     # @return [Array] An array of hash
     # 
     def processes
-      request('getAllProcessesInfo')
+      request('getAllProcessInfo')
     end
     
     ##

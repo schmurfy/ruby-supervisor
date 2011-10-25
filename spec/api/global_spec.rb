@@ -35,7 +35,7 @@ describe 'Global API' do
   end
   
   it 'should returns process state' do
-    @client.expects(:request).with('getAllProcessesInfo').returns([])
+    @client.expects(:request).with('getAllProcessInfo').returns([])
     @client.processes.should == []
   end
   
