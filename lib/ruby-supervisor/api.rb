@@ -21,9 +21,7 @@ module RubySupervisor
     include GlobalAPI
     
     
-    def initialize(address = '127.0.0.1', port = 9001, params = {})
-      uri = "http://#{address}:#{port}"
-      
+    def initialize(address = '127.0.0.1', port = 9001, params = {})      
       params = params.merge(
           :host => address,
           :port => port
