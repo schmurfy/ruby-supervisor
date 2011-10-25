@@ -4,7 +4,7 @@ require File.expand_path('../../lib/ruby-supervisor/api', __FILE__)
 describe 'API client' do
   before do
     @server = stub('XMLRPC::Client', :call => nil)
-    XMLRPC::Client.stubs(:new2).returns(@server)
+    XMLRPC::Client.stubs(:new3).returns(@server)
   end
   
   it 'should check api version on connect' do

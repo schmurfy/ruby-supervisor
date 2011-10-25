@@ -21,9 +21,15 @@ module RubySupervisor
     include GlobalAPI
     
     
-    def initialize(address = '127.0.0.1', port = 9001)
+    def initialize(address = '127.0.0.1', port = 9001, params = {})
       uri = "http://#{address}:#{port}"
-      @xmlrpc_client = XMLRPC::Client.new2(uri)
+      
+      params = params.merge(
+          :host => address,
+          :port => port
+        )
+      
+      @xmlrpc_client = XMLRPC::Client.new3(params)
       check_api_version()
     end
     
