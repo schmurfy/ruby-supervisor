@@ -73,13 +73,26 @@ module RubySupervisor
     
     ##
     # Restart the process.
+    # If you pass a block to this method it will get called
+    # after the actual restart.
+    # Be aware that wehn using a block with wait = false your block
+    # will be scheduled in a separate thread !
     # 
     # @param [Boolean] wait if true the call will
     #   block until the process is restarted.
     #
-    def restart(wait = true)
-      stop(wait)
-      start(wait)
+    def restart(wait = true, &block)
+      if wait
+        stop(true)
+        start(true)
+        block.call if block
+      else
+        Thread.new do
+          stop(true)
+          start(true)
+          block.call if block
+        end
+      end
     end
     
     ##
