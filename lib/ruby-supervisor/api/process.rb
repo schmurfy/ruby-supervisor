@@ -83,8 +83,12 @@ module RubySupervisor
     #
     def restart(wait = true, &block)
       if wait
-        stop(true)
-        start(true)
+        begin
+          stop(true)
+        ensure
+          start(true)
+        end
+        
         block.call if block
       else
         Thread.new do
