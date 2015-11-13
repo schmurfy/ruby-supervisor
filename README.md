@@ -9,6 +9,26 @@ since I did not found any in ruby I made mine !
 Instead of blindly mapping the XML-RPC methods I decided to built an API which feels more
 like a native ruby API than an ugly java like thing.
 
+# Getting started
+
+Add to your Gemfile
+
+```ruby
+gem 'ruby-supervisor'
+```
+
+And then execute
+
+`
+$ bundle install
+`
+
+Or install the gem yourself
+
+`
+$ gem install ruby-supervisor
+`
+
 # Examples
 
 ```ruby
@@ -28,8 +48,8 @@ p process.state
 p process.logs.read(0, 21)
 # => "some line of 21 bytes"
 
-process.logs.clear()
-process.restart()
+process.logs.clear
+process.restart
 ```
 
 
